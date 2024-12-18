@@ -106,6 +106,17 @@ button {
     background: #FF4500;
     transform: scale(1.1);
 }
+/* Estilização do Link para a Home */
+.home-link {
+    text-decoration: none; /* Remove sublinhado */
+    color: inherit; /* Usa a cor padrão do título */
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.home-link:hover {
+    color: #FFD700; /* Cor amarela ao passar o mouse */
+    transform: scale(1.1); /* Leve aumento */
+}
 
 
 /* Banner */
@@ -230,6 +241,74 @@ button {
     height: 80%;
 }
 
+/* Seção Tokenomics */
+#tokenomics {
+    padding: 3rem 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.tokenomics-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem; /* Espaço entre os blocos */
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap; /* Ajusta em telas menores */
+}
+
+/* Estilo para os dois blocos */
+.tokenomics-box {
+    flex: 1;
+    min-width: 300px; /* Largura mínima */
+    background: rgba(128, 0, 128, 0.85); /* Roxo translúcido */
+    color: #fff;
+    padding: 2rem;
+    border: 3px solid #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    text-align: left;
+    transition: transform 0.3s ease; /* Efeito suave */
+    overflow-y: auto; /* Scroll se o conteúdo for muito longo */
+}
+
+.tokenomics-box h2, .tokenomics-box h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px #000;
+}
+
+.tokenomics-box ul {
+    list-style: none;
+    padding-left: 0;
+    line-height: 1.6;
+}
+
+.tokenomics-box li {
+    margin-bottom: 0.5rem;
+}
+
+.tokenomics-box a {
+    color: #FFD700;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+.tokenomics-box a:hover {
+    color: #FF4500;
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    .tokenomics-container {
+        flex-direction: column; /* Empilha os blocos */
+        gap: 1.5rem;
+    }
+}
+
+
 /* Seção Roadmap */
 #roadmap {
     padding: 5rem 5%;
@@ -308,6 +387,35 @@ button {
         min-width: unset;
         max-width: unset;
     }
+}
+
+
+/* Seção Contact Icons */
+.contact-icons {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    gap: 2rem; /* Espaço entre as imagens */
+    margin-top: 2rem; /* Espaço acima das imagens */
+}
+
+.contact-icons a {
+    display: inline-block; /* Permite ajustes nas imagens */
+    transition: transform 0.3s ease; /* Efeito de hover */
+}
+
+.contact-icons img {
+    width: 80px; /* Tamanho das imagens */
+    height: 80px;
+    object-fit: contain; /* Mantém a proporção da imagem */
+    border: 3px solid #fff; /* Borda branca */
+    border-radius: 50px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra */
+    transition: transform 0.3s ease; /* Efeito de transição */
+}
+
+.contact-icons a:hover img {
+    transform: scale(1.1); /* Efeito de aumento no hover */
+    border-color: #FF4500; /* Cor laranja ao passar o mouse */
 }
 
 
