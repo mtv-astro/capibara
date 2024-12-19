@@ -5,19 +5,23 @@
     box-sizing: border-box;
 }
 
-body, html {
+body,
+html {
     font-family: 'VT323', monospace;
     background: #FFD700;
     color: #333;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     font-family: 'VT323', monospace;
     font-size: 2.5rem;
     text-shadow: 2px 2px #000;
 }
 
-p, li {
+p,
+li {
     font-family: 'VT323', monospace;
     font-size: 1.2rem;
     line-height: 1.5;
@@ -39,6 +43,8 @@ button {
     align-items: center;
     text-align: center;
     overflow: hidden;
+    padding: 2rem 5%; /* Reduz o padding vertical */
+    margin-bottom: 2rem; /* Adiciona espaço uniforme entre as seções */
 }
 
 /* Navbar */
@@ -61,7 +67,8 @@ button {
 }
 
 .navbar h1 {
-    font-size: 2rem; /* Tamanho maior */
+    font-size: 2rem;
+    /* Tamanho maior */
     text-shadow: 2px 2px #000;
 }
 
@@ -69,22 +76,30 @@ button {
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 2rem; /* Espaço maior entre os links */
+    gap: 2rem;
+    /* Espaço maior entre os links */
 }
 
 .nav-links a {
     text-decoration: none;
-    color: #FFD700; /* Cor amarela */
-    font-size: 1.5rem; /* Aumenta o tamanho da fonte */
-    text-transform: uppercase; /* Deixa tudo em maiúsculas */
+    color: #FFD700;
+    /* Cor amarela */
+    font-size: 1.5rem;
+    /* Aumenta o tamanho da fonte */
+    text-transform: uppercase;
+    /* Deixa tudo em maiúsculas */
     font-weight: bold;
-    letter-spacing: 1px; /* Espaço entre letras */
-    transition: color 0.3s ease, transform 0.2s ease; /* Transições suaves */
+    letter-spacing: 1px;
+    /* Espaço entre letras */
+    transition: color 0.3s ease, transform 0.2s ease;
+    /* Transições suaves */
 }
 
 .nav-links a:hover {
-    color: #FF4500; /* Cor laranja ao passar o mouse */
-    transform: scale(1.1); /* Efeito de aumento ao passar o mouse */
+    color: #FF4500;
+    /* Cor laranja ao passar o mouse */
+    transform: scale(1.1);
+    /* Efeito de aumento ao passar o mouse */
     text-decoration: underline;
 }
 
@@ -106,16 +121,21 @@ button {
     background: #FF4500;
     transform: scale(1.1);
 }
+
 /* Estilização do Link para a Home */
 .home-link {
-    text-decoration: none; /* Remove sublinhado */
-    color: inherit; /* Usa a cor padrão do título */
+    text-decoration: none;
+    /* Remove sublinhado */
+    color: inherit;
+    /* Usa a cor padrão do título */
     transition: color 0.3s ease, transform 0.2s ease;
 }
 
 .home-link:hover {
-    color: #FFD700; /* Cor amarela ao passar o mouse */
-    transform: scale(1.1); /* Leve aumento */
+    color: #FFD700;
+    /* Cor amarela ao passar o mouse */
+    transform: scale(1.1);
+    /* Leve aumento */
 }
 
 
@@ -136,7 +156,8 @@ button {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    image-rendering: pixelated; /* Efeito pixelado */
+    image-rendering: pixelated;
+    /* Efeito pixelado */
 }
 
 /* About Section */
@@ -215,7 +236,8 @@ button {
     text-shadow: 2px 2px #000;
 }
 
-.floating-box ul, .floating-box ol {
+.floating-box ul,
+.floating-box ol {
     text-align: left;
     margin-top: 1rem;
     line-height: 1.6;
@@ -236,7 +258,8 @@ button {
     color: #FF4500;
 }
 
-#tokenomics, #contact {
+#tokenomics,
+#contact {
     padding: 2rem 5%;
     height: 80%;
 }
@@ -244,67 +267,70 @@ button {
 /* Seção Tokenomics */
 #tokenomics {
     padding: 3rem 5%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     text-align: center;
 }
 
 .tokenomics-container {
     display: flex;
-    justify-content: space-between;
-    gap: 2rem; /* Espaço entre os blocos */
+    flex-direction: column;
+    gap: 2rem;
+    /* Espaço entre o quadro superior e os inferiores */
     max-width: 1200px;
     margin: 0 auto;
-    flex-wrap: wrap; /* Ajusta em telas menores */
 }
 
-/* Estilo para os dois blocos */
 .tokenomics-box {
-    flex: 1;
-    min-width: 300px; /* Largura mínima */
-    background: rgba(128, 0, 128, 0.85); /* Roxo translúcido */
+    align-self: center;
+    /* Centraliza o quadro superior */
+    background: rgba(128, 0, 128, 0.85);
     color: #fff;
     padding: 2rem;
     border: 3px solid #fff;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     text-align: left;
-    transition: transform 0.3s ease; /* Efeito suave */
-    overflow-y: auto; /* Scroll se o conteúdo for muito longo */
+    transition: transform 0.3s ease;
+    max-width: 800px;
+    /* Define uma largura máxima para o box superior */
 }
 
-.tokenomics-box h2, .tokenomics-box h3 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    text-shadow: 2px 2px #000;
+.tokenomics-lower-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    flex-wrap: wrap;
+    /* Ajusta em telas menores */
+    align-items: flex-start;
+    /* Alinha os boxes inferiores ao topo */
 }
 
-.tokenomics-box ul {
-    list-style: none;
-    padding-left: 0;
-    line-height: 1.6;
+.how-to-start,
+.how-to-buy {
+    flex: 1;
+    min-width: 300px;
+    /* Largura mínima */
+    max-width: 500px;
+    /* Largura máxima */
+    background: rgba(128, 0, 128, 0.85);
+    color: #fff;
+    padding: 2rem;
+    border: 3px solid #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    text-align: left;
+    transition: transform 0.3s ease;
 }
 
-.tokenomics-box li {
-    margin-bottom: 0.5rem;
-}
-
-.tokenomics-box a {
-    color: #FFD700;
-    text-decoration: underline;
-    transition: color 0.3s ease;
-}
-
-.tokenomics-box a:hover {
-    color: #FF4500;
-    text-decoration: none;
-}
-
+/* Responsividade */
 @media (max-width: 768px) {
-    .tokenomics-container {
-        flex-direction: column; /* Empilha os blocos */
+    .tokenomics-lower-container {
+        flex-direction: column;
         gap: 1.5rem;
+    }
+
+    .tokenomics-box {
+        max-width: 100%;
+        /* Ajusta o box superior à largura da tela menor */
     }
 }
 
@@ -328,9 +354,11 @@ button {
 
 /* Novo contêiner para o fundo transparente */
 .roadmap-wrapper {
-    background: rgba(128, 0, 128, 0.85); /* Roxo com transparência */
+    background: rgba(128, 0, 128, 0.85);
+    /* Roxo com transparência */
     padding: 2rem;
-    border: 3px solid #fff; /* Borda branca */
+    border: 3px solid #fff;
+    /* Borda branca */
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     width: 90%;
@@ -352,9 +380,10 @@ button {
     flex: 1;
     min-width: 200px;
     max-width: 280px;
-    background: rgba(128, 0, 128, 0.85); /* Roxo translúcido */
+    background: rgba(128, 0, 128, 0.85);
+    /* Roxo translúcido */
     color: #fff;
-    padding: 2rem;
+    padding: 1rem;
     border: 3px solid #fff;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
@@ -364,18 +393,19 @@ button {
 
 .roadmap-box:hover {
     transform: scale(1.05);
-    background: rgba(128, 0, 128, 1); /* Fundo mais forte */
+    background: rgba(128, 0, 128, 1);
+    /* Fundo mais forte */
 }
 
 .roadmap-box h3 {
-    font-size: 1.8rem;
+    font-size: 2rem;
     margin-bottom: 1rem;
-    text-shadow: 1px 1px #000;
+    text-shadow: 2px 2px #000;
 }
 
 .roadmap-box p {
-    font-size: 1.2rem;
-    line-height: 1.6;
+    font-size: 1.5rem;
+    line-height: 1;
 }
 
 @media (max-width: 768px) {
@@ -383,6 +413,7 @@ button {
         flex-direction: column;
         gap: 1.5rem;
     }
+
     .roadmap-box {
         min-width: unset;
         max-width: unset;
@@ -391,32 +422,52 @@ button {
 
 
 /* Seção Contact Icons */
+#contact-box {
+    height: auto;
+}
+
 .contact-icons {
     display: flex;
-    justify-content: center; /* Centraliza horizontalmente */
-    gap: 2rem; /* Espaço entre as imagens */
-    margin-top: 2rem; /* Espaço acima das imagens */
+    justify-content: center;
+    /* Centraliza horizontalmente */
+    gap: 2rem;
+    /* Espaço entre as imagens */
+    margin-top: 0;
+    /* Espaço acima das imagens */
 }
 
 .contact-icons a {
-    display: inline-block; /* Permite ajustes nas imagens */
-    transition: transform 0.3s ease; /* Efeito de hover */
+    display: inline-block;
+    /* Permite ajustes nas imagens */
+    transition: transform 0.3s ease;
+    /* Efeito de hover */
 }
 
 .contact-icons img {
-    width: 80px; /* Tamanho das imagens */
-    height: 80px;
-    object-fit: contain; /* Mantém a proporção da imagem */
-    border: 3px solid #fff; /* Borda branca */
-    border-radius: 50px; /* Bordas arredondadas */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra */
-    transition: transform 0.3s ease; /* Efeito de transição */
+    width: 50px;
+    /* Tamanho das imagens */
+    height: 50px;
+    object-fit: contain;
+    /* Mantém a proporção da imagem */
+    border: 3px solid #fff;
+    /* Borda branca */
+    border-radius: 50px;
+    /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    /* Sombra */
+    transition: transform 0.3s ease;
+    /* Efeito de transição */
 }
 
 .contact-icons a:hover img {
-    transform: scale(1.1); /* Efeito de aumento no hover */
-    border-color: #FF4500; /* Cor laranja ao passar o mouse */
+    transform: scale(1.1);
+    /* Efeito de aumento no hover */
+    border-color: #FF4500;
+    /* Cor laranja ao passar o mouse */
 }
 
-
-
+#tokenomics, #roadmap, #contact, #about {
+    padding: 2rem 5%; /* Reduz o padding interno */
+    margin-top: -10rem; /* Remove o espaço extra acima das seções */
+    margin-bottom: 2rem; /* Espaço uniforme entre as seções */
+}

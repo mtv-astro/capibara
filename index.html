@@ -8,7 +8,6 @@
     <title>Capibara</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
-
 </head>
 
 <body>
@@ -26,16 +25,13 @@
         <button onclick="location.href='#tokenomics';">
             BUY $CAPI
         </button>
-        
     </div>
-
     <!-- Seção Abertura -->
     <section class="section" id="intro">
         <div class="banner">
             <img src="capibarabanner.png" alt="Capibara Banner">
         </div>
     </section>
-
     <!-- Seção About -->
     <section class="section" id="about">
         <div class="description-container">
@@ -57,80 +53,86 @@
             </div>
         </div>
     </section>
-
     <!-- Seção Tokenomics -->
     <section class="section" id="tokenomics">
         <div class="tokenomics-container">
             <!-- Quadro Tokenomics -->
-            <div class="floating-box">
-                <h2>Tokenomics</h2>
+            <div class="floating-box tokenomics-box">
+                <h2 class="tokenomics-title">Tokenomics</h2>
                 <ul>
                     <li><strong>Total Supply:</strong> 1,000,000 $CAPI</li>
-                    <li><strong>Distribution:</strong> 100% $CAPI initially paired with $600.00 USD</li>
+                    <li><strong>Liquidity:</strong> 100% $CAPI initially paired with $600.00 USD</li>
                     <li><strong>Fees:</strong> NO FEES! This is XRP and we are Capibaras</li>
                     <li><strong>Contract Address:</strong> 0x123456789abcdefghijklmnopqrst987654321</li>
                 </ul>
             </div>
-
-            <!-- Quadro How to Start -->
-            <div class="floating-box how-to-start">
-                <h2>How to Start on XRPL</h2>
-                <ul>
-                    <li>Use the <a href="https://t.me/firstledger_bot" target="_blank">FirstLedger bot</a></li>
-                    <li>Bridge funds or send via CEX</li>
-                    <li>Normal XRP will work, no tag needed to send to FirstLedger bot</li>
-                    <li>Set up wallet in FirstLedger by following the steps in tg bot</li>
-                    <li>Need to activate wallet in FirstLedger (requires 10 XRP)</li>
-                    <li>Once activated, you can start trading</li>
-                </ul>
-
-                <h3>How to Buy $CAPI</h3>
-                <ul>
-                    <li>Can't buy by posting CA in the bot, so don't even try</li>
-                    <li>Click on "Open Portal" in the FirstLedger bot</li>
-                    <li>Click on "Tokens"</li>
-                    <li>Search on "Created" or by $CAPI/CA</li>
-                    <li>Click on $CAPI, scroll down, and you'll see buy/sell</li>
-                    <li>Recommended slippage: 20%+</li>
-                </ul>
+            <!-- Contêiner para os dois boxes inferiores -->
+            <div class="tokenomics-lower-container">
+                <!-- Quadro How to Start -->
+                <div class="floating-box how-to-start">
+                    <h2>How to Start on XRPL</h2>
+                    <ul>
+                        <li>Use the <a href="https://t.me/firstledger_bot" target="_blank">FirstLedger bot</a></li>
+                        <li>Bridge funds or send via CEX</li>
+                        <li>Normal XRP will work, no tag needed to send to FirstLedger bot</li>
+                        <li>Set up wallet in FirstLedger by following the steps in tg bot</li>
+                        <li>Need to activate wallet in FirstLedger (requires 10 XRP)</li>
+                        <li>Once activated, you can start trading</li>
+                    </ul>
+                </div>
+                <!-- Quadro How to Buy -->
+                <div class="floating-box how-to-buy">
+                    <h2>How to Buy $CAPI</h2>
+                    <ul>
+                        <li>Can't buy by posting CA in the bot, so don't even try</li>
+                        <li>Click on "Open Portal" in the FirstLedger bot</li>
+                        <li>Click on "Tokens"</li>
+                        <li>Search on "Created" or by $CAPI/CA</li>
+                        <li>Click on $CAPI, scroll down, and you'll see buy/sell</li>
+                        <li>Recommended slippage: 20%+</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </section>
+    
     <!-- Seção Roadmap -->
     <section class="section" id="roadmap">
         <div class="roadmap-wrapper"> <!-- Novo contêiner com fundo roxo -->
             <h2 class="roadmap-title">Roadmap</h2>
-
             <div class="roadmap-container">
                 <!-- Fase 1 -->
                 <div class="roadmap-box">
                     <h3>Phase 1</h3>
                     <p>Token Launch & Community Building</p>
+                    <p><br>Post-Launch Marketing</p>
+                    <p><br>Whitepaper V1 Released</p>
                 </div>
-
                 <!-- Fase 2 -->
                 <div class="roadmap-box">
                     <h3>Phase 2</h3>
-                    <p>Launch of CAPI Games & Applications</p>
+                    <p>Marketing Plan Development</p>
+                    <p><br>Launch of CAPI Games & Applications</p>
+                    <p><br>Marketing Execution</p>
+                    <p><br>Whitepaper V2 Released</p>
                 </div>
-
                 <!-- Fase 3 -->
                 <div class="roadmap-box">
                     <h3>Phase 3</h3>
-                    <p>Utility Development & Partnerships</p>
+                    <p>DAO Creation <br>"Capibara Herd"</p>
+                    <p><br>Utility Development & Partnerships</p>
+                    <p><br>Listing on Crypto Aggregators</p>
                 </div>
-
                 <!-- Fase 4 -->
                 <div class="roadmap-box">
                     <h3>Phase 4</h3>
-                    <p>Global Adoption & Revenue Sharing</p>
+                    <p>Global Adoption & Revenue Sharing for Capibara Herd Members</p>
+                    <p><br>Exchange Listings</p>
+                    <p><br>Keep on Build</p>
                 </div>
             </div>
         </div>
     </section>
-
-
-
     <!-- Seção Contact -->
     <section class="section" id="contact">
         <div class="floating-box" id="contact-box">
@@ -148,11 +150,7 @@
                 </a>
             </div>
         </div>
-
-
     </section>
-
-
     <script src="script.js"></script>
 </body>
 
