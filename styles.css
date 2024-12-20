@@ -1,0 +1,297 @@
+/* Reset Básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    font-family: 'VT323', monospace;
+    background: #FFD700;
+    color: #333;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'VT323', monospace;
+    font-size: 2.5rem;
+    text-shadow: 2px 2px #000;
+}
+
+p,
+li {
+    font-family: 'VT323', monospace;
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+button {
+    font-family: 'VT323', monospace;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(128, 0, 128, 0.9);
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    z-index: 10;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.navbar h1 {
+    font-size: 2rem;
+    margin: 0;
+    text-align: center;
+    flex: 1;
+}
+
+.navbar .home-link {
+    color: #FFD700;
+    text-decoration: none;
+    text-shadow: 2px 2px #000;
+}
+
+/* Links de navegação (desktop) */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    margin: 0;
+    justify-content: center;
+    flex: 2;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #FFD700;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #FF4500;
+}
+
+/* Botão BUY */
+.buy-button {
+    background: #FF6347;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    box-shadow: 2px 2px 0 #000;
+    transition: background 0.3s ease, transform 0.2s ease;
+    flex: none;
+}
+
+.buy-button:hover {
+    background: #FF4500;
+    transform: scale(1.1);
+}
+
+/* Botão hambúrguer */
+.hamburger-menu {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: #FFD700;
+    cursor: pointer;
+}
+
+/* Responsividade Navbar */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 0.5rem 1rem;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .nav-links.mobile {
+        display: flex;
+        flex-direction: column;
+        background: rgba(128, 0, 128, 0.9);
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 100%;
+        padding: 1rem;
+        border-top: 3px solid #fff;
+    }
+
+    .nav-links a {
+        margin: 0.5rem 0;
+    }
+
+    .hamburger-menu {
+        display: block;
+    }
+}
+
+
+/* Banner */
+.banner {
+    position: relative;
+    width: 90%;
+    height: 97%;
+    margin: 5%;
+    background: rgba(128, 0, 128, 0.85);
+    border: 5px solid #fff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    image-rendering: pixelated;
+}
+
+
+/* About Section */
+#description {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 0 5%;
+}
+
+.description-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    gap: 2rem;
+    height: 70%;
+}
+
+.description-text {
+    flex: 2.1;
+    background: rgba(128, 0, 128, 0.85);
+    color: #fff;
+    padding: 3rem;
+    border: 3px solid #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    text-align: left;
+    height: 70%;
+}
+
+.description-logo {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.description-logo img {
+    max-width: 80%;
+    height: auto;
+    border: 3px solid #fff;
+    border-radius: 1000px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    image-rendering: pixelated;
+}
+
+/* Floating Box (Tokenomics, Roadmap, Contact) */
+.floating-box {
+    position: relative;
+    background: rgba(128, 0, 128, 0.85);
+    color: #fff;
+    padding: 2rem;
+    border: 3px solid #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    max-width: 600px;
+    text-align: center;
+}
+
+/* Tokenomics Section */
+#tokenomics {
+    padding: 3rem 5%;
+    text-align: center;
+}
+
+.tokenomics-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Roadmap Section */
+#roadmap {
+    padding: 5rem 5%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.roadmap-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+
+
+/* Responsividade */
+@media (max-width: 768px) {
+    /* Navbar Mobile */
+    .nav-links {
+        display: none;
+    }
+
+    .nav-links.mobile {
+        display: flex;
+        flex-direction: column;
+        background: rgba(128, 0, 128, 0.9);
+        padding: 1rem;
+        border-top: 3px solid #fff;
+    }
+
+    .hamburger-menu {
+        display: block;
+    }
+
+    /* Tokenomics Mobile */
+    .tokenomics-container {
+        flex-direction: column;
+    }
+
+    .tokenomics-box {
+        max-width: 100%;
+    }
+
+    /* Roadmap Mobile */
+    .roadmap-container {
+        flex-direction: column;
+    }
+}

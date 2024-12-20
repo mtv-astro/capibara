@@ -1,4 +1,6 @@
-document.getElementById("action-btn").addEventListener("click", function() {
-    alert("Capibara: A capivara está pronta para dominar o mundo!");
-  });
-  
+const hamburger = document.querySelector('.hamburger-menu');
+const navLinks = document.querySelector('.nav-links');
+
+hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('mobile'); // Alterna a classe para exibir o menu
+});

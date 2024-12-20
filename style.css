@@ -43,8 +43,10 @@ button {
     align-items: center;
     text-align: center;
     overflow: hidden;
-    padding: 2rem 5%; /* Reduz o padding vertical */
-    margin-bottom: 2rem; /* Adiciona espaço uniforme entre as seções */
+    padding: 2rem 5%;
+    /* Reduz o padding vertical */
+    margin-bottom: 2rem;
+    /* Adiciona espaço uniforme entre as seções */
 }
 
 /* Navbar */
@@ -66,10 +68,20 @@ button {
     border-radius: 10px;
 }
 
+.navbar .home-link {
+    color: #FFD700;
+    text-decoration: none;
+    text-shadow: 2px 2px #000;
+}
+
 .navbar h1 {
     font-size: 2rem;
     /* Tamanho maior */
     text-shadow: 2px 2px #000;
+}
+
+.navbar h1:hover {
+    transform: scale(1.1);
 }
 
 /* Links da Navbar */
@@ -84,7 +96,7 @@ button {
     text-decoration: none;
     color: #FFD700;
     /* Cor amarela */
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     /* Aumenta o tamanho da fonte */
     text-transform: uppercase;
     /* Deixa tudo em maiúsculas */
@@ -109,7 +121,7 @@ button {
     color: #fff;
     border: none;
     padding: 0.5rem 1.5rem;
-    font-size: 1.5rem;
+    font-size: 1rem;
     text-transform: uppercase;
     letter-spacing: 2px;
     cursor: pointer;
@@ -123,20 +135,6 @@ button {
 }
 
 /* Estilização do Link para a Home */
-.home-link {
-    text-decoration: none;
-    /* Remove sublinhado */
-    color: inherit;
-    /* Usa a cor padrão do título */
-    transition: color 0.3s ease, transform 0.2s ease;
-}
-
-.home-link:hover {
-    color: #FFD700;
-    /* Cor amarela ao passar o mouse */
-    transform: scale(1.1);
-    /* Leve aumento */
-}
 
 
 /* Banner */
@@ -176,7 +174,7 @@ button {
     width: 100%;
     max-width: 1200px;
     gap: 2rem;
-    height: 70%;
+    height: auto;
 }
 
 .description-text {
@@ -192,12 +190,13 @@ button {
 }
 
 .description-text h2 {
-    font-size: 2rem;
+    font-size: 2.5rem;
     margin-bottom: 1rem;
+    letter-spacing: 0.2rem;
 }
 
 .description-text p {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     line-height: 1.5;
 }
 
@@ -231,7 +230,7 @@ button {
 }
 
 .floating-box h2 {
-    font-size: 2rem;
+    font-size: 2.5rem;
     margin-bottom: 1.5rem;
     text-shadow: 2px 2px #000;
 }
@@ -241,6 +240,10 @@ button {
     text-align: left;
     margin-top: 1rem;
     line-height: 1.6;
+}
+
+.tokenomics-box li {
+    font-size: 1.5rem;
 }
 
 .floating-box li {
@@ -321,20 +324,6 @@ button {
     transition: transform 0.3s ease;
 }
 
-/* Responsividade */
-@media (max-width: 768px) {
-    .tokenomics-lower-container {
-        flex-direction: column;
-        gap: 1.5rem;
-    }
-
-    .tokenomics-box {
-        max-width: 100%;
-        /* Ajusta o box superior à largura da tela menor */
-    }
-}
-
-
 /* Seção Roadmap */
 #roadmap {
     padding: 5rem 5%;
@@ -408,19 +397,6 @@ button {
     line-height: 1;
 }
 
-@media (max-width: 768px) {
-    .roadmap-container {
-        flex-direction: column;
-        gap: 1.5rem;
-    }
-
-    .roadmap-box {
-        min-width: unset;
-        max-width: unset;
-    }
-}
-
-
 /* Seção Contact Icons */
 #contact-box {
     height: auto;
@@ -466,8 +442,380 @@ button {
     /* Cor laranja ao passar o mouse */
 }
 
-#tokenomics, #roadmap, #contact, #about {
-    padding: 2rem 5%; /* Reduz o padding interno */
-    margin-top: -10rem; /* Remove o espaço extra acima das seções */
-    margin-bottom: 2rem; /* Espaço uniforme entre as seções */
+#tokenomics,
+#roadmap,
+#contact,
+#about {
+    padding: 2rem 5%;
+    /* Reduz o padding interno */
+    margin-top: -10rem;
+    /* Remove o espaço extra acima das seções */
+    margin-bottom: 2rem;
+    /* Espaço uniforme entre as seções */
+}
+
+/* Botão BUY */
+.buy-button {
+    background: #FF6347;
+    color: #fff;
+    border: none;
+    padding: 0.2rem 0.5rem;
+    font-size: 1.5rem !important;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    box-shadow: 2px 2px 0 #000;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.buy-button:hover {
+    background: #FF4500;
+    transform: scale(1.1);
+}
+
+/* Especificações para os botões BUY */
+.buy-mobile {
+    display: none;
+    /* Escondido no desktop */
+}
+
+.buy-desktop {
+    display: block;
+    /* Exibido no desktop */
+}
+
+/* Botão hambúrguer */
+.hamburger-menu {
+    display: none;
+    /* Escondido no desktop */
+}
+
+/* Responsividade Mobile */
+@media (max-width: 768px) {
+    .navbar {
+        position: fixed;
+        top: 2%;
+        left: 0;
+        width: 96%;
+        background: rgba(128, 0, 128, 0.9);
+        color: #fff;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem;
+        z-index: 10;
+        height: 8%;
+    }
+
+    .nav-links {
+        display: none;
+        /* Escondido no mobile */
+    }
+
+    .nav-links.mobile {
+        display: flex;
+        flex-direction: column;
+        background: rgba(128, 0, 128, 0.9);
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 100%;
+        /* Ocupa toda a largura */
+        padding: 1rem;
+        border-top: 3px solid #fff;
+    }
+
+    .nav-links a {
+        margin: 0.5rem 0;
+        /* Espaço entre os links no mobile */
+    }
+
+    .navbar h1 {
+        flex: 1;
+        /* Garante que o título ocupe espaço proporcional */
+        text-align: center;
+        /* Centraliza o título */
+        margin: 0;
+    }
+
+    .navbar .buy-mobile {
+        height: 200%;
+        width: 20%;
+        padding: 0.2rem;
+        /* Espaçamento interno */
+        text-align: center;
+        /* Centraliza o texto dentro do botão */
+        align-self: center;
+        font-size: 0.9rem !important;
+        display: block;
+        /* Aparece no mobile */
+    }
+
+    .buy-desktop {
+        display: none;
+        /* Escondido no mobile */
+    }
+
+    .hamburger-menu {
+        display: flex;
+        /* Flexbox para centralização */
+        justify-content: center;
+        /* Centraliza horizontalmente */
+        align-items: center;
+        /* Centraliza verticalmente */
+        width: 0.5rem;
+        /* Largura do botão */
+        height: 2rem;
+        /* Altura do botão */
+        background: none;
+        /* Remove fundo padrão */
+        border: 2px solid #fff;
+        /* Adiciona borda branca */
+        border-radius: 8px;
+        /* Arredondamento nos cantos */
+        font-size: 1.5rem;
+        /* Tamanho do caractere ☰ */
+        color: #fff;
+        /* Cor do caractere */
+        cursor: pointer;
+        /* Cursor de clique */
+        transition: transform 0.3s ease, background-color 0.3s ease;
+        /* Transição suave */
+    }
+
+    /* Efeito ao passar o mouse */
+    .hamburger-menu:hover {
+        background-color: rgba(255, 99, 71, 0.8);
+        /* Fundo com tom laranja */
+        transform: scale(1.05);
+        /* Leve aumento no tamanho */
+    }
+
+
+    /* Banner */
+    .banner {
+        width: 100%;
+        height: auto;
+    }
+
+    .banner img {
+        object-fit: contain;
+        width: 100%;
+        height: auto;
+    }
+
+    .section {
+        margin-top: 4rem;
+        margin-bottom: 10rem;
+        height: auto;
+    }
+
+    #description {
+        display: flex;
+        flex-direction: column;
+        /* Empilha os elementos no mobile */
+        justify-content: flex-start;
+        /* Alinha itens ao topo */
+        align-items: flex-start;
+        /* Alinha itens à esquerda */
+        padding: 2rem 5%;
+        /* Adiciona espaçamento interno */
+        height: auto;
+    }
+
+    .description-container {
+        display: flex;
+        flex-direction: column;
+        /* Alinha itens verticalmente */
+        gap: 1rem;
+        /* Espaço entre os elementos */
+        position: relative;
+        /* Contexto para posicionamento absoluto */
+    }
+
+    .description-text {
+        position: relative;
+        padding: 2rem;
+        background: rgba(128, 0, 128, 0.85);
+        color: #fff;
+        border: 3px solid #fff;
+        border-radius: 15px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        margin-top: 2rem;
+        width: 90%;
+        font-size: 0.1rem !important;
+    }
+
+    .description-text h2 {
+        font-size: 1.8rem;
+        /* Reduz o tamanho do título no mobile */
+    }
+
+    .description-text p {
+        font-size: 1.1rem;
+        /* Ajusta o tamanho do texto */
+    }
+
+    .description-logo {
+        position: absolute;
+        top: 2rem;
+        right: 3rem;
+        transform: translate(50%, -50%);
+        z-index: 510;
+    }
+
+    .description-logo img {
+        max-width: 120px;
+        /* Define o tamanho da logo */
+        height: 120px;
+        /* Mantém o formato circular */
+        border: 3px solid #fff;
+        /* Adiciona borda branca */
+        border-radius: 50%;
+        /* Garante o formato circular */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        /* Mantém a sombra */
+    }
+
+    #tokenomics {
+        margin-top: 0;
+        padding: 2rem 5%;
+        /* Ajusta o padding interno */
+        text-align: center;
+        /* Centraliza o texto no mobile */
+    }
+
+    .tokenomics-container {
+        display: flex;
+        flex-direction: column;
+        /* Empilha os elementos verticalmente */
+        gap: 1.5rem;
+        /* Espaço entre os quadros */
+        align-items: center;
+        /* Centraliza os quadros no container */
+    }
+
+    .tokenomics-box {
+        width: 100%;
+        /* Ocupa toda a largura disponível */
+        max-width: 95%;
+        /* Define uma largura máxima */
+        padding: 1.5rem;
+        /* Ajusta o padding interno */
+        background: rgba(128, 0, 128, 0.85);
+        /* Mantém o fundo roxo */
+        border: 3px solid #fff;
+        /* Borda branca */
+        border-radius: 15px;
+        /* Bordas arredondadas */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        /* Sombra */
+        text-align: left;
+        /* Alinha o texto à esquerda */
+        font-size: 1rem;
+        /* Ajusta o tamanho do texto */
+    }
+
+    .how-to-start,
+    .how-to-buy {
+        width: 100%;
+        /* Ocupa toda a largura disponível */
+        max-width: 95%;
+        /* Define uma largura máxima */
+        padding: 1.5rem;
+        /* Ajusta o padding interno */
+        background: rgba(128, 0, 128, 0.85);
+        /* Mantém o fundo roxo */
+        border: 3px solid #fff;
+        /* Borda branca */
+        border-radius: 15px;
+        /* Bordas arredondadas */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        /* Sombra */
+        text-align: left;
+        /* Alinha o texto à esquerda */
+        font-size: 1rem;
+        /* Ajusta o tamanho do texto */
+    }
+
+    .tokenomics-lower-container {
+        display: flex;
+        flex-direction: column;
+        /* Empilha os quadros verticalmente */
+        gap: 1.5rem;
+        /* Espaço entre os dois quadros inferiores */
+        align-items: center;
+        /* Centraliza os quadros */
+    }
+
+    .tokenomics-box h2 {
+        font-size: 1.8rem;
+        /* Ajusta o tamanho do título */
+        margin-bottom: 1rem;
+        /* Espaço abaixo do título */
+    }
+
+    .tokenomics-box ul {
+        padding: 0;
+        margin: 0;
+        list-style-position: inside;
+        /* Mantém a lista dentro do box */
+    }
+
+    .tokenomics-box li {
+        font-size: 1rem;
+        /* Ajusta o tamanho do texto das listas */
+        line-height: 1.5;
+        /* Ajusta o espaçamento entre linhas */
+        margin-bottom: 0.5rem;
+        /* Espaço entre os itens da lista */
+    }
+
+    #roadmap {
+        padding: 1rem 5%; /* Reduz o padding para telas menores */
+        margin-top: 2rem; /* Espaço superior na seção */
+    }
+    .roadmap-container {
+        display: flex;
+        flex-direction: column; /* Organiza os elementos em coluna */
+        align-items: center; /* Centraliza os elementos */
+        gap: 1.5rem; /* Espaço uniforme entre os boxes */
+        width: 100%; /* Ocupa toda a largura do container */
+        padding: 1rem; /* Adiciona espaçamento interno */
+    }
+
+    .roadmap-box {
+        
+        width: 90%; /* Define a largura dos boxes */
+        max-width: 95%; /* Largura máxima */
+        padding: 1.5rem; /* Ajusta o padding interno */
+        background: rgba(128, 0, 128, 0.85); /* Fundo roxo translúcido */
+        color: #fff; /* Texto branco */
+        border: 3px solid #fff; /* Borda branca */
+        border-radius: 15px; /* Bordas arredondadas */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra */
+        text-align: center; /* Texto centralizado */
+        font-size: 1rem; /* Ajusta o tamanho do texto */
+        transition: transform 0.3s ease; /* Animação de hover */
+    }
+
+    .roadmap-box h3 {
+        font-size: 1.5rem; /* Tamanho do título ajustado */
+        margin-bottom: 1rem; /* Espaço abaixo do título */
+    }
+
+    .roadmap-box p {
+        font-size: 1rem; /* Ajusta o tamanho do texto das descrições */
+        line-height: 1.5; /* Espaçamento entre linhas */
+        margin-bottom: 0.5rem; /* Espaço entre os parágrafos */
+    }
+
+    .roadmap-box:hover {
+        transform: scale(1.05); /* Leve aumento no hover */
+        background: rgba(128, 0, 128, 1); /* Fundo roxo sólido */
+    }
+    #contact {
+        padding: 1rem 5%; /* Reduz o padding para telas menores */
+        margin-top: 2rem; /* Espaço superior na seção */
+    }
 }
