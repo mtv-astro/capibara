@@ -661,7 +661,7 @@ button {
         top: 2rem;
         right: 3rem;
         transform: translate(50%, -50%);
-        z-index: 510;
+        z-index: 5;
     }
 
     .description-logo img {
